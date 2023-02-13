@@ -44,7 +44,7 @@ function Hero() {
         <div className="headings flex flex-col items-start justify-center h-[100%] text-[3rem]">
           <span>Experience The</span>{" "}
           <span>
-            <b>Best Qulaity Music</b>
+            <b>Largest Zambian Music Platform By 2025</b>
           </span>
           <span className="text-[15px] text-[#525D6E]">
             Donec laoreet nec velit vitae aliquam. Ut quis tincidunt purus.
