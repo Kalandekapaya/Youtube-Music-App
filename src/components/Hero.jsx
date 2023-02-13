@@ -7,41 +7,38 @@ function Hero() {
   const [elementIsVisible, setElementIsVisible] = useState(false);
   const bg = {
     true: {
-      left: "7rem",
+      left: "20rem",
     },
     false: {
-      left: "19rem",
+      left: "15rem",
     },
   };
   const musicPlayer = {
     true: {
-      left: "295px",
+      left: "140px",
     },
     false: {
-      left: "235px",
+      left: "125px",
     },
   };
   const rect = {
     true: {
-      left: "11rem",
+      left: "12rem",
     },
     false: {
-      left: "13rem",
+      left: "7rem",
     },
   }
   const heart = {
     true: {
-      left: "9rem",
+      left: "10rem",
     },
     false: {
-      left: "12.5rem",
+      left: "5.5rem",
     },
   };
   return (
-    <VisibilitySensor
-      onChange={(isVisible) => setElementIsVisible(isVisible)}
-      minTopValue={300}
-    >
+    
       <div className="wrapper bg-[#081730] flex items-center justify-between px-[5rem] rounded-b-[5rem] w-[100%] h-[35rem] relative z-[3]">
         {/* left side */}
         <div className="headings flex flex-col items-start justify-center h-[100%] text-[3rem]">
@@ -60,12 +57,15 @@ function Hero() {
             <DownloadAds />
           </div>
         </div>
+        <VisibilitySensor
+          onChange={(isVisible) => setElementIsVisible(isVisible)}
+             minTopValue={100}>
         {/* right side */}
         <div className="images relative w-[50%]">
           <motion.img
             variants={bg}
             animate={`${elementIsVisible}`}
-            transition={{ duration: 1, type: "ease-out" }}
+            transition={{ duration: 0.9, type: "ease-out" }}
             src={require("../img/backgraphics.png")}
             alt=""
             className="absolute top-[-8rem] left-[19rem]"
@@ -91,7 +91,7 @@ function Hero() {
             animate={`${elementIsVisible}`}
             transition={{
               type: "ease-out",
-              duration: 1,
+              duration: 0.8,
             }}
             src={require("../img/p 3.png")}
             alt=""
@@ -102,15 +102,16 @@ function Hero() {
             animate={`${elementIsVisible}`}
             transition={{
               type: "ease-out",
-              duration: 1,
+              duration: 0.7,
             }}
             src={require("../img/p 4.png")}
             alt=""
             className="absolute w-[5rem] left-[12.5rem] top-[12rem]"
           />
         </div>
+        </VisibilitySensor>
       </div>
-    </VisibilitySensor>
+    
   );
 }
 
