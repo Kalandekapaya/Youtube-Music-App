@@ -29,7 +29,7 @@ function Search() {
     },
   };
   return (
-    <div className="search relative h-[65rem] px-[5rem] bg-[#081730] pt-[18rem] pb-[10rem] mt-[-15rem] z-[1] flex items-center justify-between rounded-b-[5rem]">
+    <div className="hero min-h-screen bg-base-200 relative">
       {/* left side */}
       <div className="left flex-1">
         <motion.img
@@ -77,14 +77,10 @@ function Search() {
         />
       </div>
       {/* right side */}
-      <div className="right flex items-start flex-col justify-start flex-1 h-[100%] pt-[9rem]">
+      <div className="flex w-full]">
         {/* Search */}
-        <div className="searchbar flex justify-start w-[100%]">
-          <input
-            type="text"
-            placeholder="Enter the keyword or URL"
-            className="flex-[19] outline-none bg-[#020917] rounded-xl p-3 h-[3rem]"
-          />
+        <div className="grid h-20 flex-grow card bg-base-300 rounded-box place-items-center">
+        <input type="text" placeholder="Type here" className="input input-bordered input-accent w-full max-w-xs" />
           {/* SearchIcon */}
           <div className="searchIcon flex flex-1 items-center rounded-xl ml-4 bg-gradient-to-bl from-[#F3071D] to-[#E600FF] p-4 h-[3rem]">
             <img
@@ -95,7 +91,7 @@ function Search() {
           </div>
         </div>
         {/* tild icon */}
-        <div className="tild flex justify-start mt-7 items-center w-[100%]">
+        <div className="grid h-20 flex-grow card bg-base-300 rounded-box place-items-center">
           <img
             src={require("../img/Path 318.png")}
             alt=""

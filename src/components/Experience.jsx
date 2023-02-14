@@ -3,23 +3,69 @@ import Feature from "./Feature";
 
 function Experience() {
   return (
-    <div className="experience flex flex-col items-center justify-start px-[5rem] bg-[#020917] h-[60rem] pt-[18rem] mt-[-10rem] relative z-[2] rounded-b-[5rem]">
+    <div className="flex flex-col w-full">
       {/* titld icon */}
-      <img src={require("../img/Path 318.png")} alt="" className="w-[5rem]" />
+      <img src={require("../img/Path 318.png")} alt=""  />
       {/* heading */}
-      <div className="headline mt-7 flex flex-col items-center text-[2rem]">
-        <span>An Amazing App Can Change Your Daily Life</span>
-        <span>
-          <b>Music Experience</b>
-        </span>
+
+      <div className="hero">
+          <div className="hero-overlay bg-opacity-60">
+            <div className="hero-content text-center text-neutral-content">
+                <span>
+                  An Amazing App Can Change Your Daily Life
+                </span>
+                <span>
+                  <b>Music Experience</b>
+                </span>
+            </div>
+          </div>
       </div>
       {/* features  */}
-      <div className="feature flex items-center justify-around mt-[6rem] w-[100%]">
-        <Feature icon="Group 2" title="For Live Music" />
-        <Feature icon="music icon" title="For Daily Music" />
-        <Feature icon="Group 4" title="For Artists" />
+
+      <div className="hero min-h-screen bg-base-200">     
+          <div className="hero-content flex-col lg:flex-row-reverse">
+                <div className="card w-96 bg-base-100 shadow-xl">
+                    <figure className="px-10 pt-10">
+                        <Feature icon="Group 2" title="For Live Music" />
+                    </figure>
+                        <div className="card-body items-center text-center">
+                            <h2 className="card-title">Shoes!</h2>
+                            <p>If a dog chews shoes whose shoes does he choose?</p>
+                              <div className="card-actions">
+                                <button className="btn btn-primary">Buy Now</button>
+                              </div>
+                        </div>
+                </div>
+
+              <div className="card w-96 bg-base-100 shadow-xl">
+                <figure className="px-10 pt-20">
+                  <Feature icon="music icon" title="For Daily Music" />
+                </figure>
+                    <div className="card-body items-center text-center">
+                      <h2 className="card-title">Shoes!</h2>
+                      <p>If a dog chews shoes whose shoes does he choose?</p>
+                        <div className="card-actions">
+                          <button className="btn btn-primary">Buy Now</button>
+                        </div>
+                    </div>
+              </div>
+                
+              <div className="card w-96 bg-base-100 shadow-xl">
+                <figure className="px-10 pt-10">
+                  <Feature icon="Group 4" title="For Artists" />
+                </figure>
+                  <div className="card-body items-center text-center">
+                    <h2 className="card-title">Shoes!</h2>
+                    <p>If a dog chews shoes whose shoes does he choose?</p>
+                      <div className="card-actions">
+                        <button className="btn btn-primary">Buy Now</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
       </div>
-    </div>
+
   );
 }
 

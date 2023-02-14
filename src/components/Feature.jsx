@@ -5,10 +5,10 @@ import VisibilitySensor from "react-visibility-sensor";
 function Feature({ icon, title }) {
   const variant = {
     true: {
-      transform: "scale(1)",
+      transform: "scale(2)",
     },
     false: {
-      transform: "scale(0.5)",
+      transform: "scale(1)",
     },
   };
   const [elementIsVisible, setElementIsVisible] = useState(false);
@@ -23,27 +23,27 @@ function Feature({ icon, title }) {
         <motion.div
           variants={variant}
           transition={{
-            duration: 1,
+            duration: 0.7,
             type: "ease-out",
           }}
           animate={`${elementIsVisible}`}
-          className="icon bg-[#081730] rounded-2xl p-4"
+          className="icon bg-[#171618] mask mask-star-2 p-7"
         >
           <img
             src={require(`../img/${icon}.png`)}
             alt=""
-            className="w-[3rem]"
+            className="w-[1.5rem] mt-2.5"
           />
         </motion.div>
 
-        <span className="mt-5">{title}</span>
+        <span className="mt-9">{title}</span>
 
         <span className="text-[#707070] mt-4">
           Nunc elementum, dolor vitae lacinia pulvinar, augue felis scelerisque
           libero, sit amet laoreet lorem.
         </span>
 
-        <span className="text-[#E600FF] underline mt-[3rem] hover:cursor-pointer">
+        <span className="text-[#A2BFF4] underline mt-[3rem] hover:cursor-pointer">
           Learn more
         </span>
       </div>
