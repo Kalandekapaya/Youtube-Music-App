@@ -39,25 +39,41 @@ function Hero() {
   };
   return (
     
-      <div className="wrapper bg-[#081730] flex items-center justify-between px-[5rem] rounded-b-[5rem] w-[100%] h-[35rem] relative z-[3]">
-        {/* left side */}
-        <div className="headings flex flex-col items-start justify-center h-[100%] text-[3rem]">
-          <span>Experience The</span>{" "}
-          <span>
-            <b>Largest Zambian Music Platform By 2025</b>
-          </span>
-          <span className="text-[15px] text-[#525D6E]">
-            Donec laoreet nec velit vitae aliquam. Ut quis tincidunt purus.
-            <br />
-            Suspendisse in leo non risus tincidunt lobortis.
-          </span>
-          {/* download ads */}
+      // <div className="wrapper bg-[#081730] flex items-center justify-between px-[5rem] rounded-b-[5rem] w-[100%] h-[35rem] relative z-[3]">
+      //   {/* left side */}
+      //   <div className="headings flex flex-col items-start justify-center h-[100%] text-[3rem]">
+      //     <span>Experience The</span>{" "}
+      //     <span>
+      //       <b>Largest Zambian Music Platform By 2025</b>
+      //     </span>
+      //     <span className="text-[15px] text-[#525D6E]">
+      //       Donec laoreet nec velit vitae aliquam. Ut quis tincidunt purus.
+      //       <br />
+      //       Suspendisse in leo non risus tincidunt lobortis.
+      //     </span>
+      //     {/* download ads */}
+      //     <div>
+      //       <span className="text-[13px]">Download now on IOS and Android</span>
+      //       <DownloadAds />
+      //     </div>
+      //   </div>
+
+
+      <div className="hero min-h-screen bg-base-200 relative">
+          <div className="hero-content flex-col lg:flex-row-reverse">
+            <img src="../img/Screenshot.png" className="max-w-sm rounded-lg shadow-2xl"  alt=""/>
+              <div>
+                <h1 className="text-5xl font-bold">Box Office News!</h1>
+                <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                 {/* download ads */}
           <div>
             <span className="text-[13px]">Download now on IOS and Android</span>
             <DownloadAds />
           </div>
-        </div>
-        <VisibilitySensor
+                <button className="btn btn-primary">Get Started</button>
+              </div>
+          </div> 
+          <VisibilitySensor
           onChange={(isVisible) => setElementIsVisible(isVisible)}
              minTopValue={100}>
         {/* right side */}
@@ -68,7 +84,7 @@ function Hero() {
             transition={{ duration: 0.9, type: "ease-out" }}
             src={require("../img/backgraphics.png")}
             alt=""
-            className="absolute top-[-8rem] left-[19rem]"
+            className="absolute top-[-8rem] left-[9rem]"
           />
           <img
             src={require("../img/p 1.png")}
@@ -84,7 +100,7 @@ function Hero() {
             }}
             src={require("../img/p 2.png")}
             alt=""
-            className="absolute left-[235px] top-[94px] w-[175px]"
+            className="absolute left-[105px] top-[94px] w-[175px]"
           />
           <motion.img
             variants={rect}
@@ -111,6 +127,10 @@ function Hero() {
         </div>
         </VisibilitySensor>
       </div>
+
+
+       
+      // </div>
     
   );
 }
